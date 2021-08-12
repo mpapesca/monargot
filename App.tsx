@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Welcome to Monargot!</Text>
+      <Text>Welcome to Monargot! I hope we can fix your slang problems!</Text>
       <StatusBar style="auto" />
     </View>
   );
