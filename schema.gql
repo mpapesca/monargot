@@ -1,0 +1,30 @@
+type Phrase {
+    text: String!
+    definitions: [Definition!]!
+}
+
+type Definition {
+    phrase: Phrase!
+    text: String!
+    regions: [Region!]!
+    eras: [Era!]!
+    rating: Int!
+}
+
+type Region {
+    name: String!
+    definitions: [Definition!]!
+}
+
+type Era {
+    startYear: Int!
+    endYear: Int!
+    definitions: [Definition!]!
+}
+
+type Query {
+    allPhrases: [Phrase!]!
+    allDefinitions: [Definition!]!
+    allRegions: [Region!]!
+    allEras: [Era!]!
+}
