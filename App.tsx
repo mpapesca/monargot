@@ -1,35 +1,22 @@
-import { Box, Center, Heading, NativeBaseProvider, Text, Image } from 'native-base';
-// import { Image } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
+import { Box, Center, NativeBaseProvider, Input, Container, Text, Heading } from 'native-base';
 import AppBar from './src/components/AppBar';
-import logo from './assets/logo-1.png';
+import theme from './src/theme';
+import Section from './src/components/Section';
+import RecentlyAdded from './src/components/sections/RecentlyAdded';
+import LeaderBoard from './src/components/sections/LeaderBoard';
 
 export default function App() {
+
+  const [searchText, setSearchText] = useState('');
+
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       <AppBar />
-      <Center flex={1}>
-        <Box p={9}
-          _text={{
-            fontSize: "md",
-            fontWeight: "bold",
-            color: "white",
-          }}
-          shadow={5}
-          rounded="lg"
-        >
-          <Center>
-            <Image
-              source={logo}
-              alt="Monargot Logo"
-              size={"xl"}
-              rounded="lg"
-            />
-            <Heading>Welcome to Monargot!</Heading>
-            <Text>I hope we can fix your slang problems!</Text>
-          </Center>
-        </Box>
-      </Center>
+      <Box w="100%" px="15%" alignContent="center">
+        <RecentlyAdded />
+        <LeaderBoard />
+      </Box>
     </NativeBaseProvider >
   );
 }
