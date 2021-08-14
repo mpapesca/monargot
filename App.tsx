@@ -1,9 +1,11 @@
 import { Box, Center, Heading, NativeBaseProvider, Text } from 'native-base';
 import React from 'react';
+import AppBar from './src/components/AppBar';
 
 export default function App() {
   return (
     <NativeBaseProvider>
+      <AppBar />
       <Center flex={1}>
         <Box p={9}
           _text={{
