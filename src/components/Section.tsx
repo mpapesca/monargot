@@ -3,8 +3,8 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import { StyleSheet } from 'react-native';
 
 interface ISectionProps {
-    title: string,
-    children: ReactNode
+  title: string;
+  children?: ReactNode;
 }
 
 const Section: FunctionComponent<ISectionProps> = (props) => {
